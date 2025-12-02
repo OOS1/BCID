@@ -1,0 +1,433 @@
+/* ====================================
+   Faculty Page Styles
+   ==================================== */
+
+/* Faculty Hero */
+.faculty-hero {
+  position: relative;
+  padding: 180px 0 100px;
+  background: var(--color-primary);
+  overflow: hidden;
+}
+
+.faculty-hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.faculty-hero-bg .hero-pattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle at 60% 30%, var(--color-accent-glow) 0%, transparent 50%),
+    radial-gradient(circle at 20% 70%, rgba(124, 58, 237, 0.2) 0%, transparent 50%);
+}
+
+.faculty-hero-content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.faculty-hero h1 {
+  color: var(--color-white);
+  margin-bottom: var(--space-lg);
+}
+
+.faculty-hero p {
+  font-size: var(--text-xl);
+  color: var(--color-gray-300);
+  line-height: 1.7;
+}
+
+/* Faculty Section */
+.faculty-section {
+  background: var(--color-off-white);
+}
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .faculty-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .faculty-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Faculty Card */
+.faculty-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-gray-100);
+  transition: all var(--transition-base);
+}
+
+.faculty-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.faculty-card-header {
+  position: relative;
+  padding: var(--space-2xl);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.faculty-avatar {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
+  border-radius: 50%;
+  color: var(--color-white);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: var(--space-md);
+}
+
+.faculty-badge {
+  padding: var(--space-xs) var(--space-md);
+  background: var(--color-accent);
+  color: var(--color-primary);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.faculty-card-body {
+  padding: var(--space-xl);
+}
+
+.faculty-card-body h3 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-xs);
+  text-align: center;
+}
+
+.faculty-title {
+  display: block;
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-accent-dark);
+  font-weight: 500;
+  margin-bottom: var(--space-md);
+}
+
+.faculty-specialization {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-md);
+  padding: var(--space-md);
+  background: var(--color-off-white);
+  border-radius: var(--radius-md);
+}
+
+.faculty-specialization strong {
+  color: var(--color-gray-700);
+}
+
+.faculty-bio {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+
+.faculty-details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-gray-100);
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+}
+
+.detail-item svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.detail-item a {
+  color: var(--color-accent-dark);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.detail-item a:hover {
+  color: var(--color-accent);
+}
+
+/* Staff Section */
+.staff-section {
+  background: var(--color-white);
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .staff-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.staff-card {
+  text-align: center;
+  padding: var(--space-2xl);
+  background: var(--color-off-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-gray-100);
+  transition: all var(--transition-base);
+}
+
+.staff-card:hover {
+  border-color: var(--color-accent);
+}
+
+.staff-avatar {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-lg);
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
+  border-radius: 50%;
+  color: var(--color-accent);
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+.staff-card h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.staff-title {
+  display: block;
+  font-size: var(--text-sm);
+  color: var(--color-accent-dark);
+  font-weight: 500;
+  margin-bottom: var(--space-md);
+}
+
+.staff-card p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+
+.staff-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
+  color: var(--color-gray-500);
+}
+
+.staff-contact svg {
+  color: var(--color-accent);
+}
+
+/* Office Hours Section */
+.hours-section {
+  background: var(--color-off-white);
+}
+
+.hours-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .hours-content {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+
+.hours-info h2 {
+  margin-bottom: var(--space-lg);
+}
+
+.hours-info > p {
+  font-size: var(--text-lg);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-2xl);
+}
+
+.hours-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+@media (min-width: 640px) {
+  .hours-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.hours-card {
+  background: var(--color-white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-gray-100);
+}
+
+.hours-card h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-md);
+  color: var(--color-gray-800);
+}
+
+.hours-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.hours-card li {
+  position: relative;
+  padding-left: var(--space-xl);
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+}
+
+.hours-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: var(--color-accent);
+  border-radius: 50%;
+}
+
+.hours-note {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: rgba(0, 212, 255, 0.1);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--color-accent);
+}
+
+.hours-note svg {
+  flex-shrink: 0;
+  color: var(--color-accent);
+}
+
+.hours-note p {
+  font-size: var(--text-sm);
+  color: var(--color-gray-700);
+  margin: 0;
+}
+
+/* Location Card */
+.location-card {
+  background: var(--color-primary);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-2xl);
+}
+
+.location-card h3 {
+  color: var(--color-white);
+  margin-bottom: var(--space-xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.location-item {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.location-item:last-child {
+  border-bottom: none;
+}
+
+.location-name {
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-bottom: var(--space-xs);
+}
+
+.location-detail {
+  font-size: var(--text-sm);
+  color: var(--color-gray-400);
+}
+
+/* Join Section */
+.join-section {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+  padding: var(--space-4xl) 0;
+}
+
+.join-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.join-content h2 {
+  color: var(--color-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.join-content p {
+  font-size: var(--text-lg);
+  color: var(--color-primary-light);
+  margin-bottom: var(--space-2xl);
+}
+
+.join-section .btn-primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.3);
+}
+
+.join-section .btn-primary:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+}
